@@ -1,6 +1,6 @@
 import { API } from "../config";
 export function getRooms() {
-  return fetch(`https://86lgb.sse.codesandbox.io/api/rooms`).then((data) =>
+  return fetch(`{API}/rooms`).then((data) =>
     data.json()
   );
 }

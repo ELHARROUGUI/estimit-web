@@ -1,1 +1,1 @@
-export const API = "https://8vjvd.sse.codesandbox.io/api";
+export const API = "http://zace5e133-za1b95269-gtw.qovery.io/api/rooms/api";

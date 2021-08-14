@@ -1,6 +1,6 @@
 import { API } from "../config";
 export function getRooms() {
-  return fetch(`{API}/rooms`).then((data) =>
+  return fetch(`${API}/rooms`).then((data) =>
     data.json()
   );
 }

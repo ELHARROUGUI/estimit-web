@@ -1,1 +1,1 @@
-export const API = "https://zace5e133-za1b95269-gtw.qovery.io/api";
+export const API = "https://z05f7d8bf-z7384303d-gtw.qovery.io/api";

@@ -1,28 +1,17 @@
-import { useEffect, useState } from "react";
 import "./styles.css";
-import { getRooms } from "./services/room";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Welcome from "./screens/welcome";
+import Room from "./screens/room";
 
 export default function App() {
-  const [rooms, setRooms] = useState([]);
-
-  useEffect(() => {
-    let mounted = true;
-    getRooms().then((items) => {
-      if (mounted) {
-        setRooms(items);
-      }
-    });
-    return () => (mounted = false);
-  }, []);
-
   return (
-    <div className="App">
-      <h1>ESTIMIT</h1>
-      <ul>
-        {rooms.map((item) => (
-          <li key={item.item}>{item.item}</li>
-        ))}
-      </ul>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={Welcome} />
+          <Route path="/room" component={Room} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }

@@ -1,0 +1,11 @@
+application:
+  name: estimit-web
+  project: estimit
+  cloud_region: aws/eu-west-3
+  publicly_accessible: true
+routers:
+- name: web
+  routes:
+  - application_name: estimit-web
+    paths:
+    - /*
